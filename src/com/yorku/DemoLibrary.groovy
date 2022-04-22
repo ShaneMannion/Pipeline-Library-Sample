@@ -4,7 +4,7 @@ package com.yorku
 class DemoLibrary {
 
     def outputReport(){
-        echo "Hello, this is your report"
+        println("Hello, this is your report")
     }
 
 }

@@ -2,5 +2,5 @@
 package com.yorku
 
 def outputReport(){
-        eho "Hello, this is your report"
+        echo "Hello, this is your report"
     }

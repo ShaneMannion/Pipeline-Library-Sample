@@ -2,13 +2,12 @@
 package com.yorku
 
 def outputReport(){
-        def title = "Jenkins build report for " + env.BUILD_TAG + "\n"
-        def buildDetails = "Job " + env.JOB_BASE_NAME + " executed by " + env.USER + "\n"
-        def nodeDetails = "Node " + env.NODE_NAME + " with workspace " + env.WORKSPACE + "\n"
-        def serverDetails = "Jenkins login URL " + env.HUDSON_URL + "\n"
+        def title = "\t\t\t\t" + "Jenkins build report for " + env.BUILD_TAG + "\n"
+        def buildDetails = "  Jenkins job '" + env.JOB_BASE_NAME + "' was executed by user:" + env.USER + ".\n"
+        def nodeDetails = "  The job executed on node " + env.NODE_NAME + ".\n" 
+        def workspaceDetails = "  The workspace was " + env.WORKSPACE + ".\n"
+        def serverDetails = "  Jenkins login URL " + env.HUDSON_URL + ".\n"
         def border = "***********************************************************" + "\n"
-        
-        echo "Hello, this is your report ${env.BUILD_TAG} "
-        println ("Node label is " + env.NODE_LABELS)
-        println (border + border + title + border + buildDetails + nodeDetails + serverDetails + border)
+
+        println (border + border + title + border + buildDetails + nodeDetails + serverDetails + border + border)
     }
